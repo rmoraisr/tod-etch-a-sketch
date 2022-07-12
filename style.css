@@ -32,11 +32,16 @@ body {
     
 }
 
-h1, h3, .btn, .btn-reset {
+p {
+    font-size: 15px;
+    text-align: center;
+}
+
+h1, h3, p, .btn, .btn-reset {
     font-family: 'Edu NSW ACT Foundation', cursive;
 }
 
-h1, h3 {
+h1, h3, p {
     color: yellow;
 }
 
