@@ -46,6 +46,9 @@ function changeSize() {
     })
 };
 
+/**
+ * When the user clicks on a grid box, run the hoverEffect function.
+ */
 function startHoverEffect() {
     const gridBoxes = document.querySelectorAll('.grid-box');
     gridBoxes.forEach((gridBox) => {
@@ -55,6 +58,9 @@ function startHoverEffect() {
     })
 }
 
+/**
+ * When the mouse hovers over a grid box, add the class 'hovered' to it
+ */
 function hoverEffect() {
     const gridBoxes = document.querySelectorAll('.grid-box');
     gridBoxes.forEach((gridBox) => {
@@ -64,6 +70,9 @@ function hoverEffect() {
     })
 };
 
+/**
+ * It removes the 'hovered' class from all the grid boxes, and then calls the initialize function
+ */
 function reset() {
     const gridBoxes = document.querySelectorAll('.grid-box');
     gridBoxes.forEach(gridBox => {
