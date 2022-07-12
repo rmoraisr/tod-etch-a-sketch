@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@700&family=Open+Sans&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0px;
     padding: 0;
+}
+
+body {
+    background: rgb(189, 210, 210);
 }
 
 .container, .footer {
@@ -15,13 +21,29 @@
 
 .container {
     background: #129a93;
+    border-radius: 20px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
+
 }
 
-.header {
+.header, h1{
     padding: 10px 0;
-    font-size: 28px;
-    color: #eeee08;
+    font-size: 48px;
+    
 }
+
+h1, h3, .btn, .btn-reset {
+    font-family: 'Edu NSW ACT Foundation', cursive;
+}
+
+h1, h3 {
+    color: yellow;
+}
+
+h3 {
+    font-size: 24px;
+}
+
 
 .grid-container {
     background: #dfdcdc;
@@ -45,6 +67,10 @@
     background: #eeeeee;
 }
 
+.grid-box.hovered {
+    background: #707070;
+}
+
 .grid-box#small {
     height: 8.6px;
     width: 8.6px;
@@ -60,6 +86,39 @@
     width: 21.2px;
 }
 
+.mode-buttons, .reset-button {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.reset-button {
+    justify-content: flex-end;
+    padding: 30px;
+}
+
+.btn, .btn-reset {
+    padding: 5px;
+    border: 0;
+    border-radius: 10px;
+    background: yellow;
+    color: blueviolet;
+    font-size: 14px;
+    width: 12%;
+}
+
+.btn:hover, .btn-reset:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+.btn-reset {
+    color: gray;
+}
+
 .footer {
     font-size: 12px;
     color: gray;
@@ -67,7 +126,6 @@
     justify-content: center;
     gap: 10px;
 }
-
 a {
     text-decoration: none;
     color: inherit;

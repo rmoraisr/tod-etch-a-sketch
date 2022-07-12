@@ -32,20 +32,43 @@ function changeSize() {
         button.addEventListener('click', () => {
             if (button.id === 'small') {
                 generateGrid('small', sizeSmall);
+                hoverEffect();
             }
             else if (button.id === 'medium') {
                 generateGrid('medium', sizeMedium);
+                hoverEffect();
             }
             else if (button.id === 'big') {
                 generateGrid('big', sizeBig);
+                hoverEffect();
             }
         });
     })
 };
 
+function hoverEffect() {
+    const gridBoxes = document.querySelectorAll('.grid-box');
+    gridBoxes.forEach((gridBox) => {
+        gridBox.addEventListener('mouseover', () => {
+            gridBox.classList.add('hovered');
+        })
+    })
+};
+
+function reset() {
+    const gridBoxes = document.querySelectorAll('.grid-box');
+    gridBoxes.forEach(gridBox => {
+        gridBox.classList.remove('hovered');
+    })
+};
+
+resetButton = document.querySelector('.btn-reset');
+resetButton.addEventListener('click', () => reset());
+
 function initialize() {
     generateGrid();
     changeSize();
+    hoverEffect();
 };
 
 initialize();
