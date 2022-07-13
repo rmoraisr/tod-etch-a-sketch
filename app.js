@@ -17,31 +17,21 @@ function generateGrid(cssId = 'medium', size = 48 * 48) {
     }
 };
 
+
 /**
  * The function changeSize() is called when the user clicks on one of the three buttons. The function
- * then calls the generateGrid() function with the appropriate size
+ * then calls the generateGrid() function, passing in the number of columns and the number of boxes as
+ * arguments.
  */
 function changeSize() {
-    // Number of boxes
-    const sizeSmall = 60 * 60;
-    const sizeMedium = 48 * 48;
-    const sizeBig = 26 * 26
+    const boxNumber = [(60 * 60), (48 * 48), (26 * 26)]; //small, medium, big
+    const columnNumber = ['small', 'medium', 'big']; // cssId for number of columns
 
     const buttons = document.querySelectorAll('.btn');
     buttons.forEach((button) => {
         button.addEventListener('click', () => {
-            if (button.id === 'small') {
-                generateGrid('small', sizeSmall);
-                startHoverEffect();
-            }
-            else if (button.id === 'medium') {
-                generateGrid('medium', sizeMedium);
-                startHoverEffect();
-            }
-            else if (button.id === 'big') {
-                generateGrid('big', sizeBig);
-                startHoverEffect();
-            }
+            generateGrid(columnNumber[button.value], boxNumber[button.value])
+            startHoverEffect();
         });
     })
 };
